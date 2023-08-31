@@ -2,7 +2,7 @@
 h1{text-align: center; margin: 50px auto;} 
 h1 a {} 
 h1 a img{ width: 200px;}
-main {width: 500px; background-color: aqua; margin: 0 auto;}
+main {width: 500px; margin: 0 auto;}
 main #loginFrm{
   border-bottom: 1px solid #ccc; margin-bottom: 20px;
   padding-bottom: 20px;
@@ -13,12 +13,22 @@ main #loginFrm fieldset ul li {
   border: 1px solid #ccc; background-color: white;
   display: flex; flex-direction: row nowrap;
   margin-bottom: 10px;
+  position: relative;
 }
 main #loginFrm fieldset ul .error{
   color: #e7223d  ; padding: 10px; display: none;
 }
-main #loginFrm fieldset ul .id_error{}
-main #loginFrm fieldset ul .pw_error{}
+main #loginFrm fieldset ul .id_error{
+  border: 0;
+  font-size: small;
+  padding-top: 2px;
+}
+main #loginFrm fieldset ul .pw_error{
+  border: 0;
+  font-size: small;
+  padding-top: 2px;
+
+}
 main #loginFrm fieldset ul li span {
 }
 main #loginFrm fieldset ul li .id_bg {
@@ -50,11 +60,19 @@ main #loginFrm fieldset ul li .pw_bg {
     position: absolute; left: 14px; top: 9px;
 }
 main #loginFrm fieldset ul li span input {
-  width: 448px; height: 45px;
+  width: 400px; height: 45px; border: 0; padding-left: 5px ;
+}
+main #loginFrm fieldset ul li span input::placeholder{
+  font-size: medium; color: #aaa;
 }
 main #loginFrm fieldset ul li span input[type=text] {}
 main #loginFrm fieldset ul li span input[type=passward] {}
-main #loginFrm fieldset ul li .pw_show_hide {}
+main #loginFrm fieldset ul li .pw_show_hide {
+  background-image: url(../images/icon.svg);
+  background-position: -105px 0;
+  width: 21px; height: 21px;
+  position: absolute; right: 11px; top: 11px;
+}
 main #loginFrm fieldset .btm {
   display: flex; flex-direction: row nowrap;
   padding: 15px 0; justify-content: space-between;
